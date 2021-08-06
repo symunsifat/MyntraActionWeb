@@ -4,9 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.PageFactory;
 
-import Driver.DriverSetup;
-
 import Elements.MyntraSearchBar;
+import myntra.Utilities.DriverSetup;
 
 public class MyntraSearchBarPageAction {
 	

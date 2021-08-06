@@ -2,15 +2,17 @@ package myntra.Actions;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
-import Driver.DriverSetup;
 import Elements.CartPageElements;
+import myntra.Utilities.DriverSetup;
 
 public class MyntraCartPageActions {
 	
 	CartPageElements cartPageElements;
 	
+	Actions action = new Actions(DriverSetup.chromeDriver);
 	public MyntraCartPageActions() {
 		
 		this.cartPageElements= new CartPageElements();
@@ -28,12 +30,14 @@ public class MyntraCartPageActions {
 	}
 
 	public void clickBagIcon( ) {
-		
+	action.moveToElement(cartPageElements.clickbagicon).build().perform();
+	
 		cartPageElements.clickbagicon.click();
+		
 	}
 	
 public void checkdeliverytimeservices( ) {
-		
+	//action.moveToElement("cartPageElements.Mensbtn").build().perform();	
 		cartPageElements.checkdeliverytimeservices.sendKeys();
 }
 
